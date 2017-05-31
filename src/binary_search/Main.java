@@ -46,6 +46,26 @@ public class Main {
 		}
 	}
 
+	public static int rankCountLessThanKey(int[] arr,int key){
+		int returnValue=0;
+		for(int x : arr ){
+			if(x<key){
+				returnValue++;
+			}
+		}
+		return returnValue;
+		
+	}
+	
+	public static int countDuplicates(int[] arr,int key){
+		int returnValue=0;
+		for(int x : arr ){
+			if(x==key){
+				returnValue++;
+			}
+		}
+		return returnValue;
+	}
 	public static int[] removeDuplicates(int[] arrs) {
 		int[] returnValue = new int[arrs.length];
 		int retValCtr = 0;
@@ -77,6 +97,8 @@ public class Main {
 		System.out.println(binarySearch(1, arrs));
 		;
 		printArray(removeDuplicates(arrs));
+		System.out.println("Less Count"+rankCountLessThanKey(arrs,3));
+		System.out.println("Equals Count"+countDuplicates(arrs,11));
 
 	}
 
